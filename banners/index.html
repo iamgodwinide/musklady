@@ -1,0 +1,629 @@
+<style>
+
+@font-face {
+  font-family: msdos;
+  src: url("fonts/DOS.ttf");
+}
+
+body{
+	
+	background-image: url("img/background/clouds.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.toplevel{
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+
+	//margin-bottom: 0px;
+	//padding-top: 0px;
+	
+	max-width: 50em;
+	//background-image: url("img/TILE2.png");
+	background-color: #fdf6e3;
+	border-style: outset;
+		border-image-source: url("img/CDE_border_c1.png");
+		border-image-width: 64px;
+		border-image-slice: 64;
+		 border-image-repeat: repeat;
+}
+.header{
+
+}
+.header .showcase{
+	display: flex;
+	justify-content: center;
+}
+.header .showcase img{
+	max-width: 50em;
+	
+	overflow: hidden;
+	padding: 7 7 7 7;
+}
+.header .title{
+	font-family: Times New Roman;
+	font-size: 8em;
+	text-align: center;
+	
+	
+	color: white;
+}
+.header .title img{
+	opacity: 0.6;
+	width: 40%;
+	max-width: 512px;
+	
+}
+.desc{
+	font-family: msdos;
+	font-size: 1em;
+	text-align: left;
+	margin: auto;
+	color: #596e75;
+	max-width: 80%;
+	padding: 24px;
+	//background-image: url("img/CONC5.png");
+
+}
+.header .linkbar{
+	margin: 32px;
+	font-family: msdos;
+	font-size: 1em;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	max-width: 40em;
+
+	margin: auto;
+	margin-top: 0px;
+	margin-bottom: 32px;
+	padding-left: 32px;
+	padding-right: 32px;
+}
+
+
+.link{
+	color: #268bd3;
+	background-color: #e9a98f;
+	border-color: #f9d3c3;
+	border-style: outset;
+	padding: 4px;
+	border-width: 4px;
+	width: 8em;
+	text-align: center;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 8px;
+	margin-left: 8px;
+	margin-right: 8px;
+
+}
+
+/*
+@media (orientation: portrait){
+.link{
+	font-size: 2em;
+}
+}
+*/
+.body{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.body .showcase{
+	background-color: #282c34;
+	max-width: 30em;
+	margin: auto;
+	position: relative;
+	width: 80%;
+}
+.body .showcase img{
+	width: 100%;
+	z-index: -1;
+	filter: drop-shadow(4px 4px 0 black);
+}
+.body .showcase .text{
+	font-family: msdos;
+	font-size: 1em;
+	color: #aeb5c3;
+	position: absolute;
+	max-width: 65%;
+	max-height: 50%;
+	top: 30%;
+	left: 30%;
+	
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.body .showcase .text .header{
+	color: #e86d75;
+}
+.body .mint-counter{
+
+	background-color: white;
+	border-style: outset;
+	border-image-source: url("img/CDE_border.png");
+	border-image-width: 64px;
+	border-image-slice: 64;
+	border-image-repeat: repeat;
+	border-width: 10px;
+	max-width: 40%;
+	width: 10em;
+	margin: auto;
+	font-family: msdos;
+	font-size: 1em;
+	color: #8dac8a;
+	text-align: center;
+	padding: 16px;
+}
+.body .mint-box{
+
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	margin: auto;
+	width: 80%;
+	max-width: 768px;
+
+}
+.body .mint-control{
+font-family: msdos;
+	font-size: 2em;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	max-height: 75px;
+	color: #596e75;
+	
+}
+.wallet-connect{
+	font-family: msdos;
+	font-size: 1em;
+	color: #268bd3;
+	background-color: #e9a98f;
+	border-color: #f9d3c3;
+	border-style: outset;
+	padding: 8px;
+	border-width: 4px;
+	width: 10em;
+	text-align: center;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin: auto;
+	margin-top: 32px;
+
+}
+
+.footer{
+	font-family: msdos;
+	font-size: 1em;
+	color: #268bd3;
+	text-align: center;
+	margin: 32px;
+}
+
+.mintbox{
+	max-width: 30em;
+	margin: auto;
+	position: relative;
+	width: 80%;
+	
+	display: flex;
+	flex-direction: column;
+	font-family: msdos;
+	font-size: 1em;
+	color: #b5b4b4;
+	
+	position: relative;
+}
+.mintbox img{
+
+	width: 100%;
+	z-index: -1;
+}
+.mintbox .inside{
+	position: absolute;
+	width: 100%;
+	top: 15%;
+	text-align: center;
+	display: flex;
+	flex-direction: column;	
+}
+
+.mintbox .img{
+	filter: drop-shadow(4px 4px 0 black);
+}
+.mintbox .mbutton{
+	background-color: lightgray;
+	border-style: outset;
+	border-width: 4px;
+	padding: 4px;
+	max-width: 10em;
+	margin: auto;
+	color: #e25d9f;
+	user-select: none;
+	cursor: pointer; 
+	display: none;
+}
+.mintbox .mbutton:hover{
+	color: #8c6bce;
+	background-color: #f1edfa;
+	border-color: #dedddf;
+	
+}
+
+.mintbox .inside{
+	color: #b5b4b4;
+	text-align: center;
+	max-width: 20em;
+	margin: auto;
+	margin-left: 5em;
+	margin-right: 5em;
+	margin-top: 8px;
+	
+
+}
+
+.mintbox .inside .desc a{
+	color: #e25d9f;
+}
+
+
+.mintbox .mbutton:active{
+	border-style: inset;
+}
+
+a{
+	text-decoration: none;
+}
+.desc a{
+	color: #268bd3;
+}
+
+.linkbar .link:hover{
+	color: #D9742C;
+	background-color: #165670;
+	border-color: #3e6f83;
+	border-style: outset;
+}
+.linkbar .link:active{
+	border-style: inset;
+}
+
+
+
+</style>
+		<script src="bignumber.min.js"></script>
+<script src="web3.min.js"></script>
+<script>
+
+var ubtext = [
+	"believes every conspiracy theory.",
+	"believes in network spirituality.",
+	"has no linear pattern of thought.",
+	"is a figment of your imagination.",
+	"is now seeing for the first time.",
+	"is undetectable whilst crouching.",
+	"is very dangerous. Do not engage.",
+	"puts praise in the praise folder.",
+	"is on the right side of history.",
+	"has been banned for ban evasion.",
+	"has been very productive lately.",
+	"is excited about things to come.",
+	"posts like a timeline flashbang.",
+	"remembers like it was yesterday.",
+	"wins and wins and wins and wins.",
+	"believes in hypercitationalism.",
+	"disconnected from your channel.",
+	"has secured generational wrath.",
+	"is a light that never goes out.",
+	"is a miserable pile of secrets.",
+	"is a neochibi auction princess.",
+	"is having fun online every day.",
+	"is disqualified from jury duty.",
+	"is the sleepiest little kitten.",
+	"is working on learning to love.",
+	"eatig french frine.",
+	"is waiting for you to mint."
+];
+
+var showcase = {
+	idx: 0,
+	lp: 0,
+};
+
+var account, index;
+
+function sc_upd_aux0(){
+	
+	if(showcase.lp == 0){
+		setTimeout(sc_upd);
+		return;
+	}
+	
+	showcase.lp -= 1;
+
+	e = document.getElementById("sctext").innerHTML;
+	document.getElementById("sctext").innerHTML = e.substring(0,showcase.lp);
+	
+	setTimeout(sc_upd_aux0,8);
+}
+
+function sc_upd_aux1(){
+		
+	if(showcase.lp == ubtext[showcase.idx].length){
+		setTimeout(sc_upd_aux0,1000);
+		return;
+	}
+	
+	showcase.lp += 1;
+	
+	e = document.getElementById("sctext").innerHTML;
+	document.getElementById("sctext").innerHTML = 
+		ubtext[showcase.idx].substring(0,showcase.lp);
+	
+	setTimeout(sc_upd_aux1,16);
+}
+
+function sc_upd(){
+	e = document.getElementById("sctext");
+	
+	var new_idx = Math.floor(Math.random() * (ubtext.length-1));
+	if(new_idx >= showcase.idx){
+		showcase.idx = new_idx + 1;
+	}
+	else{
+		showcase.idx = new_idx;
+	}
+	
+	setTimeout(sc_upd_aux1);
+}
+
+var ABI = [{"inputs":[],"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"owner","type":"address"},{"indexed":true,"internalType":"address","name":"approved","type":"address"},{"indexed":true,"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"Approval","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"owner","type":"address"},{"indexed":true,"internalType":"address","name":"operator","type":"address"},{"indexed":false,"internalType":"bool","name":"approved","type":"bool"}],"name":"ApprovalForAll","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"previousOwner","type":"address"},{"indexed":true,"internalType":"address","name":"newOwner","type":"address"}],"name":"OwnershipTransferred","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"from","type":"address"},{"indexed":true,"internalType":"address","name":"to","type":"address"},{"indexed":true,"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"Transfer","type":"event"},{"inputs":[{"internalType":"uint256","name":"user","type":"uint256"},{"internalType":"uint256","name":"i","type":"uint256"},{"internalType":"uint8","name":"j","type":"uint8"}],"name":"CheckPacked","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"i","type":"uint256"},{"internalType":"uint8","name":"j","type":"uint8"}],"name":"MintMain","outputs":[],"stateMutability":"payable","type":"function"},{"inputs":[],"name":"StartMint","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"Withdraw","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"approve","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"owner","type":"address"}],"name":"balanceOf","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"getApproved","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"owner","type":"address"},{"internalType":"address","name":"operator","type":"address"}],"name":"isApprovedForAll","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"mintCounter","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"name","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"owner","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"ownerOf","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"renounceOwnership","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"from","type":"address"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"safeTransferFrom","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"from","type":"address"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"},{"internalType":"bytes","name":"_data","type":"bytes"}],"name":"safeTransferFrom","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"operator","type":"address"},{"internalType":"bool","name":"approved","type":"bool"}],"name":"setApprovalForAll","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"string","name":"baseURI","type":"string"}],"name":"setBaseURI","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"string","name":"contractURI","type":"string"}],"name":"setContractURI","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"bytes4","name":"interfaceId","type":"bytes4"}],"name":"supportsInterface","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"symbol","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"index","type":"uint256"}],"name":"tokenByIndex","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"owner","type":"address"},{"internalType":"uint256","name":"index","type":"uint256"}],"name":"tokenOfOwnerByIndex","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"tokenURI","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"totalSupply","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"from","type":"address"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"transferFrom","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"newOwner","type":"address"}],"name":"transferOwnership","outputs":[],"stateMutability":"nonpayable","type":"function"}];
+var ADDRESS = "0x1352149Cd78D686043B504e7e7D96C5946b0C39c";
+
+function mint_wl(){
+
+	mint_main(0,index);
+	document.getElementById("mbutton").onclick = mint_paid;
+	const button = document.getElementById("mbutton");
+	button.innerHTML = "Mint (0.2 ETH)"; 
+}
+
+function mint_paid(){
+	mint_main(1,index);
+	const button = document.getElementById("mbutton");
+	button.innerHTML = "Done minting!"; 
+	document.getElementById("mbutton").onclick = null;
+}
+
+async function mint_main(is_paid,obj){
+	if(!account){
+		return;
+	}
+
+	const web3 = new Web3(window.ethereum);
+	const contract = new web3.eth.Contract(ABI, ADDRESS);
+	
+	const gas_price = await web3.eth.getGasPrice();
+	var gas = 0;
+	var price = 0;
+	if(is_paid){
+		price = BigNumber(2).multipliedBy("1e17");
+	}
+	console.log(price);
+	try{ 
+		gas = await contract.methods.MintMain(obj.i,obj.j).estimateGas({ gasPrice: gas_price , from: account, value: price });
+	}
+	catch{
+		console.log("estg failed");
+		
+		gas = 300000; //Math.floor(BigNumber(0.05).multipliedBy("1e18").dividedBy(gas_price).toNumber());
+	}
+	console.log("gas: "+ gas);
+	console.log("price: "+ price);
+	contract.methods.MintMain(obj.i,obj.j).send({ gas: gas, from: account, gasPrice: gas_price.toString(), value: price,   });
+	
+}
+
+async function eth_start(){
+	const msg = document.getElementById("emsg");
+	const web3 = new Web3(window.ethereum);
+	const 	contract = new web3.eth.Contract(ABI, ADDRESS);
+	try{
+		const chainId = await web3.eth.getChainId();
+		//if(chainId != 0x1){
+		///	throw "Wallet not connected to Ethereum Mainnet.";
+		//}
+		const accounts = await web3.eth.requestAccounts();
+		account = accounts[0];
+		msg.innerHTML =  "Wallet: " + account;
+		//check if on whitelist
+		var xhr = new XMLHttpRequest();
+		xhr.responseType = "json";
+		xhr.onload = async function(){
+			if(xhr.status != "200"){
+				return;
+			}
+			console.log(xhr.response);
+			const wl = xhr.response;
+			console.log(wl);
+			console.log("checking index");
+			console.log(account);
+			index = wl[account.toLowerCase()];
+			const button = document.getElementById("mbutton");
+			if(index){
+				console.log("index passed");
+				console.log( account );
+				console.log( index.i );
+				console.log( index.j );
+				
+				const is_wl = await contract.methods.CheckPacked(account,index.i,index.j).call();
+				console.log(is_wl);
+				if(is_wl){
+					console.log("wl passed");
+					
+					const is_paid = await contract.methods.mintCounter(account).call();
+					if(is_paid > 0){
+						document.getElementById("mbutton").onclick = mint_paid;
+						button.innerHTML = "Mint (0.2 ETH)"; 
+					}
+					
+					document.getElementById("mbutton").onclick = mint_wl;
+					button.innerHTML = "Mint (Free)";
+					return;
+				}
+				
+								
+				
+			}
+			
+			button.innerHTML = "Not on whitelist.";
+			
+			
+		}
+		xhr.open("GET.html","data/whitelist.json");
+		xhr.send();
+	}
+	catch(error){	
+		if(error.message){
+			msg.innerHTML = "ERROR: " + error;
+		}
+		else{
+			msg.innerHTML = "Undefined error.";
+		}
+	}
+}
+
+function wallet_connect(){
+
+	
+	
+	if(window.ethereum.isConnected()){
+		eth_start();
+		return;
+	}
+	
+	console.log("doing ether.on connect");
+	ethereum.on("connect",eth_start);
+	const msg = document.getElementById("emsg");
+	msg.innerHTML = "Connecting...";
+	
+	
+	
+	document.getElementById("mbutton").style.display  = "hidden";
+	
+}
+
+window.onload = function(){
+	
+	var sctext = document.getElementById("sctext").innerHTML;
+
+	showcase.idx = -1;
+	showcase.lp = sctext.length;
+	setTimeout(sc_upd_aux0);
+	
+	if(window.ethereum){
+		document.getElementById("mbutton").style.display = "initial";
+		document.getElementById("mbutton").onclick = wallet_connect;
+	}
+	else{
+		const msg = document.getElementById("emsg");
+		msg.innerHTML = "Ethereum wallet not detected. Please <a href='https://ethereum.org/en/wallets/find-wallet/'>Install a wallet</a> to continue."; 
+
+	}
+}
+
+
+	
+
+
+</script>
+<html>
+	
+<!-- Mirrored from miladymaker.net/banners/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 May 2023 21:35:09 GMT -->
+<body>
+		<div class="toplevel">
+			<div class="header">
+				<div class="showcase">
+					<img src="img/sample/1.jpg">
+					</img>
+				</div>
+				<div class="title">
+					<img src="img/title.png">
+					</img>
+				</div>
+				<div class="desc">
+					<i>Banners</i> is a generative NFT collection exploring a hypercitation of early 00's digital aesthetics with content organically sourced from performative posts made within the <a href="../index.html">Milady Maker</a> community.
+				</div>
+				<div class="linkbar">
+					<a href="https://twitter.com/miladymaker">
+						<div class="link">
+							Twitter
+						</div>
+					</a>
+					<a href="https://discord.gg/Milady">
+						<div class="link">
+							Discord
+						</div>
+					</a>
+					<a href="https://opensea.io/collection/banners-nft">
+						<div class="link">
+							OpenSea
+						</div>
+					</a>
+					<a href="https://etherscan.io/address/0x1352149cd78d686043b504e7e7d96c5946b0c39c">
+						<div class="link">
+							Contract
+						</div>
+					</a>
+				</div>
+			</div>
+
+			
+			<div class="body">
+				<div class="showcase">
+					<img src="img/FVWM.png">
+					</img>
+					<div class="text">
+						<span class="header">This user </span><span id="sctext">longs for Network Spirituality.</span>
+					</div>
+				</div>
+				<div class="desc">
+					<p>
+						<i>Banners</i> recontextualizes the userboxes of early internet personalization into modern social media platforms, with a syncretic design citing wikipedia userpages, forum signatures, and operating system themes and text content detourning the basic element of userbox self-description with absurd, aesthetic and hypercitational references.
+					</p>
+				</div>
+				<div class="mintbox">
+					<div class="img">
+						<img src="img/FVWM_blue.png">
+						</img>
+					</div>
+										<div class="inside">
+						<p>
+						Minting has completed. You can view the collection on the secondary market at <a href="https://opensea.io/collection/banners-nft">OpenSea</a>
+						and setup peer-to-peer trades at <a href="https://nfttrader.io/">NFT Trader</a>
+						</p>
+					</div>
+					
+				</div>
+			</div>
+			<div class="footer">
+				<p>
+					<a href="https://viralpubliclicense.org/">
+						VIRAL PUBLIC LICENSE<br>
+						Copyleft (c) All Rights Reversed
+					</a>	
+				</p>
+			</div>
+		</div>
+	</body>
+
+<!-- Mirrored from miladymaker.net/banners/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 May 2023 21:35:12 GMT -->
+</html>
